@@ -29,7 +29,6 @@ practice-problems/
 ├── arrays/
 │   ├── problem1/
 │   │   ├── README.md
-│   │   ├── input.txt
 │   │   ├── solution.js
 │   │   └── test.js
 │   ├── problem2/
