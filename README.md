@@ -63,7 +63,3 @@ practice-problems/
 │   └── ...
 └── ...
 ```
-
-## Contact
-
-If you have any questions or suggestions, feel free to reach out to me at [your email address]. Thank you for checking out my practice problems!
