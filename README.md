@@ -1,10 +1,10 @@
 # Interview Practice Problems
 
-This repository contains my solutions to various coding problems that I have been practicing in preparation for coding interviews. The problems are sourced from [Interview Cake](https://www.interviewcake.com/).
+This repository contains my solutions to various coding problems that I have been practicing in preparation to better learn data structures and algorithms. The problems are sourced from multiple resources. 
 
 Each problem is presented in a separate directory, with the problem statement and any relevant information provided in a README file. Within each directory, you will find a solution file containing my implementation of the solution, as well as any additional files required to run the solution (such as input files).
 
-The problems are organized by data structure, with each directory containing problems that involve the same data structure. Currently, the data structures included are:
+The problems are organized by data structure, with each directory containing problems that involve the same data structure. In the future, I plan to diversify the algorithms and data structures covered in this repository. Currently, the data structures included are:
 
 - Array
 - Linked List
