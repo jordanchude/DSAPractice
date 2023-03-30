@@ -1,4 +1,4 @@
-# Interview Practice Problems
+# DSA Practice Problems
 
 This repository contains my solutions to various coding problems that I have been practicing in preparation to better learn data structures and algorithms. The problems are sourced from multiple resources. 
 
