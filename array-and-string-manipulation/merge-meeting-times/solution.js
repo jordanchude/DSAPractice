@@ -5,34 +5,31 @@ function mergeRanges(meetings) {
     // variables
     // newMeetingTimes
     // lastAddedMeeting
-    
-    
-
     let sortedMeetings = meetings.sort((a, b) => a.startTime - b.startTime);
-    let newMeetingTimes = [];
-    let lastAddedMeeting = newMeetingTimes[newMeetingTimes.length - 1];
+    let newMeetingTimes = [sortedMeetings[0]];
 
     // psuedocode
     // sort meeting times
     // loop through objects
     for (let i = 1; i < sortedMeetings.length; i++) {
-     if (sortedMeetings[i].startTime > lastAddedMeeting.endTime) {
-      newMeetingTimes.push(sortedMeetings[i]);
-      console.log(lastAddedMeeting)
-     } else {
-      continue;
-     }
-    }
-    return newMeetingTimes;
+      let lastAddedMeeting = newMeetingTimes[newMeetingTimes.length - 1];
+      if (sortedMeetings[i].startTime <= lastAddedMeeting.endTime) {
+        lastAddedMeeting.endTime = Math.max(sortedMeetings[i].endTime, lastAddedMeeting.endTime)
+      } else {
+        newMeetingTimes.push(sortedMeetings[i])
+      }
   }
 
- mergeRanges([
+  return newMeetingTimes;
+}
+
+ console.log(mergeRanges([
     { startTime: 0,  endTime: 1 },
     { startTime: 3,  endTime: 5 },
     { startTime: 4,  endTime: 8 },
     { startTime: 10, endTime: 12 },
     { startTime: 9,  endTime: 10 },
-  ])
+  ]))
 
   // Tests
   
@@ -118,4 +115,4 @@ function mergeRanges(meetings) {
 //   } else {
 //     console.log(`${desc} ... PASS`);
 //   }
-// }
+// } 
