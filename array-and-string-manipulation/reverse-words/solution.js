@@ -11,17 +11,17 @@ const reverseWords = (array) => {
     // pseudocode
     // variables: beginningOfReversal;
 
-    let beginningOfReversal = 0;
     array = reverseSingleWord(0, array.length - 1, array)
 
-    for (let i = 0; i <= array.length - 1; i++) {
-        if (array[i] === ' ') {
+    let beginningOfReversal = 0;
+
+    for (let i = 0; i <= array.length; i++) {
+        if (i === array.length || array[i] === ' ') {
             reverseSingleWord(beginningOfReversal, i - 1, array)
             beginningOfReversal = i + 1;
-        } else if (i === array.length - 1) {
-            reverseSingleWord(beginningOfReversal, i, array);
         }
     }
+    
     return array;
 }
 
