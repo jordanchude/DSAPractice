@@ -5,22 +5,17 @@ function mergeArrays(firstArray, secondArray) {
     let j = 0;
     let currentMerge = 0;
 
-    if (firstArray.length === 0) return secondArray
-    if (secondArray.length === 0) return firstArray
-
       while (mergedArray.length < (firstArray.length + secondArray.length)) {
-        if (i >= firstArray.length) {
+
+        let firstArrayExhausted = i >= firstArray.length;
+        let secondArrayExhaused = j >= secondArray.length;
+        
+        if (!secondArrayExhaused && (firstArrayExhausted || firstArray[i] > secondArray[j])) {
           mergedArray[currentMerge] = secondArray[j];
           j++;
-        } else if (j >= secondArray.length) {
+        } else {
           mergedArray[currentMerge] = firstArray[i];
           i++;
-        } else if (firstArray[i] < secondArray[j]) {
-          mergedArray[currentMerge] = firstArray[i]
-          i++;
-        } else {
-          mergedArray[currentMerge] = secondArray[j]
-          j++;
         }
 
         currentMerge++
