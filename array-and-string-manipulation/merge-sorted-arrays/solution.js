@@ -3,17 +3,27 @@ function mergeArrays(firstArray, secondArray) {
     let mergedArray = [];
     let i = 0;
     let j = 0;
+    let currentMerge = 0;
 
-    
-    
+    if (firstArray.length === 0) return secondArray
+    if (secondArray.length === 0) return firstArray
+
       while (mergedArray.length < (firstArray.length + secondArray.length)) {
-        if (firstArray[i] > secondArray[j]) {
-          mergedArray.push(secondArray[j]);
+        if (i >= firstArray.length) {
+          mergedArray[currentMerge] = secondArray[j];
           j++;
-        } else {
-          mergedArray.push(firstArray[i]);
+        } else if (j >= secondArray.length) {
+          mergedArray[currentMerge] = firstArray[i];
           i++;
+        } else if (firstArray[i] < secondArray[j]) {
+          mergedArray[currentMerge] = firstArray[i]
+          i++;
+        } else if (secondArray[j] < firstArray[i]) {
+          mergedArray[currentMerge] = firstArray[i]
+          j++;
         }
+
+        currentMerge++
       }
 
     
@@ -22,7 +32,7 @@ function mergeArrays(firstArray, secondArray) {
   }
 
   const myArray = [3, 4, 6, 10, 11, 15];
-  const alicesArray = [1, 5, 8, 12, 14, 19];
+  const alicesArray = [1, 5, 8, 12, 14, 19, 20, 21];
 
   console.log(mergeArrays(myArray, alicesArray));
   // logs [1, 3, 4, 5, 6, 8, 10, 11, 12, 14, 15, 19]
