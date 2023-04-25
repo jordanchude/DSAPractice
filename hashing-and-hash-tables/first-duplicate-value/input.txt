@@ -1,0 +1,9 @@
+4
+7
+a b c d c e f
+8
+x y z x a b c d
+6
+1 2 3 2 4 5
+5
+apple orange banana grape apple
