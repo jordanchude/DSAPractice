@@ -1,8 +1,35 @@
-// Your findFirstDuplicate function implementation here
-
+{}
 function findFirstDuplicate(arr) {
-    // ...
+    // notes
+        // hashing to find duplicates
+    // pseudocode
+        // loop through array
+            // if current element doesn't exist in the hash stable
+                // add it with a value or true
+            // if it does, return the value
+    // variables
+            // hash table
+    // edge cases
+        // array is empty
+        // there are no duplicates
+        // does the array accept all value types
+    
+
+        let hashTable = {};
+
+        for (let i = 0; i < arr.length; i++) {
+            let currentElement = arr[i];
+            
+            if (!hashTable[currentElement]) {
+                hashTable[currentElement] = true;
+            } else {
+                return currentElement;
+            }
+        }
 }
+
+
+console.log(findFirstDuplicate(["a", "b", "c", "d", "c", "e", "f"]))
 
 // Test cases
 
