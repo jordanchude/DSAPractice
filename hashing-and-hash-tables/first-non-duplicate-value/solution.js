@@ -1,23 +1,26 @@
 function firstNonDuplicateCharacter(str) {
-    // notes
-        // use hash table
-        // find way to identify which duplicate came first
-        // there will be two values that are non-duplicates
-        // find non-duplicate values
-        // return which one is first in the string
-        // need to keep track of two things
-            // if value is non-duplicate
-            // index
-    // variables
-        // hashTable
-    // pseudocode
-        // loop through string
-            // initialize key, value pair in hashTable with index
-        // loop through hashTable
-            // if 
-    // edge cases
-        // there are two non-duplicate values
+
+    let hashTable = {};
+
+    for (let i = 0; i < str.length; i++) {
+        let currentLetter = str[i];
+
+        if (!hashTable[currentLetter]) {
+            hashTable[currentLetter] = 0;
+        }
+
+        hashTable[currentLetter] += 1;
+    }
+
+    for (element in hashTable) {
+        if (hashTable[element] === 1) {
+            return element;
+        }
+    }
+
 }
+
+console.log(firstNonDuplicateCharacter("minimum"))
 
 // Test cases
 let desc, actual, expected;
