@@ -12,7 +12,8 @@ function firstNonDuplicateCharacter(str) {
         hashTable[currentLetter] += 1;
     }
 
-    for (element in hashTable) {
+    for (let i = 0; i < str.length; i++) {
+        let element = str[i];
         if (hashTable[element] === 1) {
             return element;
         }

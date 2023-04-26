@@ -1,25 +1,4 @@
 function findIntersection(arr1, arr2) {
-    // notes
-        // hashing to make each element true in a hash table
-    // pseudocode
-        // loop through array one
-            // create a boolean, "true," for each item in the array
-        
-        // loop through array 2
-            // if current item is true in hash table
-            // add to intersection array
-    // return the intersection array
-    
-    // variables
-        // intersection array
-        // hash table
-
-    // edge cases
-        // if one of the arrays is empty, return an empty array
-        // if there's no intersection, return empty array
-        // does it handle different data types?
-        // with duplicates, add it twice
-
     let hashTable = {};
     let intersectionArr = [];
 
