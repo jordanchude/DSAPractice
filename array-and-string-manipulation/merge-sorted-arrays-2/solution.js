@@ -12,20 +12,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   // Tests
   
   let desc = 'both arrays are empty';
