@@ -47,4 +47,6 @@ let merge = (left, right) => {
     return result;
 }
 
+// NEXT: CHANGE FOR NEGATIVE NUMBERS EDGE CASE
+
 module.exports = { mergeSort };
