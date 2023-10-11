@@ -1,3 +1,5 @@
+const { mergeSort } = require('./solution');
+
 // A helper function to check if two arrays are equal
 function arraysEqual(a, b) {
     if (a.length !== b.length) return false;
@@ -39,3 +41,4 @@ printTestResult("Test 2", mergeSort(test2), expected2);
 printTestResult("Test 3", mergeSort(test3), expected3);
 printTestResult("Test 4", mergeSort(test4), expected4);
 printTestResult("Test 5", mergeSort(test5), expected5);
+
